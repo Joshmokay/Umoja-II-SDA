@@ -1,0 +1,48 @@
+/* Reusable Flowing Wave Backgrounds */
+
+.section-wave {
+    position: relative;
+    overflow: hidden; /* Ensure pattern stays inside the section */
+}
+
+/* Ensure the content is above the background pattern */
+.section-wave > .container,
+.section-wave > .max-w-7xl,
+.section-wave > .max-w-[1600px],
+.section-wave > .relative {
+    position: relative;
+    z-index: 10;
+}
+
+/* Base style for the background pattern */
+.section-wave::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* =========================================
+   1. Pattern 1: Light & Subtle (For white backgrounds)
+   ========================================= */
+.wave-pattern-1::before {
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 600" xmlns="http://www.w3.org/2000/svg"><path fill="%234f83cc" fill-opacity="0.03" d="M0,200 C300,400 600,0 1440,200 L1440,600 L0,600 Z"></path><path fill="%232B548B" fill-opacity="0.02" d="M0,400 C400,200 800,600 1440,300 L1440,600 L0,600 Z"></path></svg>');
+}
+
+/* =========================================
+   2. Pattern 2: Soft Gradient (For gray backgrounds)
+   ========================================= */
+.wave-pattern-2::before {
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 600" xmlns="http://www.w3.org/2000/svg"><path fill="%232B548B" fill-opacity="0.04" d="M0,100 C400,300 1000,0 1440,200 L1440,600 L0,600 Z"></path><path fill="%234f83cc" fill-opacity="0.03" d="M0,300 C500,100 900,500 1440,250 L1440,600 L0,600 Z"></path></svg>');
+}
+
+/* =========================================
+   3. Pattern 3: Dark Overlay (For dark/image backgrounds)
+   ========================================= */
+.wave-pattern-3::before {
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 600" xmlns="http://www.w3.org/2000/svg"><path fill="%23ffffff" fill-opacity="0.03" d="M0,300 C300,500 800,100 1440,350 L1440,600 L0,600 Z"></path><path fill="%234f83cc" fill-opacity="0.05" d="M0,100 C400,0 1000,400 1440,200 L1440,600 L0,600 Z"></path></svg>');
+}
